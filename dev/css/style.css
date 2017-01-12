@@ -1,0 +1,225 @@
+body {
+  font-size: 18px;
+  line-height: 27px;
+  background-color: #292929;
+  color: #ffffff;
+  font-family: PT Sans Narrow, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+b {
+  font-size: 30px;
+  line-height: 40px;
+}
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-header__logo {
+  text-align: center;
+  background-color: #252323;
+}
+.page-header__logo img {
+  width: 230px;
+  height: 80px;
+}
+@media (min-width: 768px) {
+  .page-header {
+    background-color: #000;
+  }
+  .page-header__logo {
+    background: url("../img/bg-tablet.jpg") center -74px no-repeat;
+    background-size: cover;
+    height: 402px;
+    margin-top: 0;
+    order: 2;
+    width: 100%;
+  }
+  .page-header__logo img {
+    width: 370px;
+    height: 210px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    background-color: #000;
+  }
+  .page-header__logo {
+    background-image: url("../img/bg-desktop.jpg");
+    background-position: center -72px;
+    height: 650px;
+    padding-top: 50px;
+  }
+  .page-header__logo img {
+    width: 380px;
+    height: 170px;
+  }
+}
+.main-nav {
+  position: relative;
+  width: auto;
+  background-color: #826550;
+  min-height: 50px;
+  width: 250px;
+  margin: 0 auto;
+}
+.main-nav__toggle {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  font-size: 0;
+  display: block;
+  width: 70px;
+  height: 50px;
+  background-color: #6a4d38;
+  border: 0;
+  cursor: pointer;
+}
+.main-nav__toggle:hover {
+  background-color: #624530;
+}
+.main-nav__toggle:active {
+  background-color: #593d29;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  width: 36px;
+  height: 2px;
+  position: absolute;
+  background-color: #ffffff;
+  top: 15px;
+  left: 17px;
+  box-shadow: 0 8px 0 0 #fff,
+  				0 16px 0 0 #fff;
+}
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  left: 0;
+  right: auto;
+}
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 2px;
+  background-color: #ffffff;
+  top: 23px;
+  left: 18px;
+}
+.main-nav--opened .main-nav__toggle::before {
+  transform: rotate(45deg);
+}
+.main-nav--opened .main-nav__toggle::after {
+  transform: rotate(-45deg);
+}
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+}
+.main-nav__item a {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  display: block;
+  text-decoration: none;
+  padding: 13px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #71543f;
+  border-bottom: 1px solid #886e5b;
+}
+.main-nav__item a[href]:hover {
+  background-color: #6a4d38;
+  border-top-color: #6a4d38;
+}
+.main-nav__item a[href]:active {
+  background-color: #503827;
+  border-top-color: #6a4d38;
+}
+.main-nav__userblock {
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 17px 21px;
+  padding-left: 50px;
+}
+.main-nav__userblock:hover {
+  background-color: #503827;
+  border-top-color: #6a4d38;
+}
+.main-nav__userblock:before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/login.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 21px;
+}
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+  .main-nav--closed .main-nav--active {
+    display: block;
+  }
+  .main-nav--closed .main-nav--active a {
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 70px;
+  }
+  .main-nav--closed .main-nav__userblock {
+    display: none;
+  }
+}
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  left: 70px;
+  height: 80vh;
+  background-color: #826550;
+}
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  height: auto;
+}
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
+.main-nav--nojs .main-nav--active a {
+  padding-left: 21px;
+  padding-right: 21px;
+  text-align: left;
+}
+.main-nav--nojs .main-nav__userblock {
+  display: block;
+  background-color: #6a4d38;
+}
