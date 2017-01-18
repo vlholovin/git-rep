@@ -13,7 +13,13 @@
 	<!-- HEADER -->
 	<header class="page-header">
 		<div class="page-header__logo">
+			<picture>
+				<source media="(min-width: 1200px)"
+					srcset="img/logotype-desktop.png">
+				<source media="(min-width: 768px)"
+					srcset="img/logotype-tablet.svg">
 			<img src="img/logotype-mobile.svg" alt="barbershop_logo" width="370" height="153">
+			</picture>
 		</div>
 		<nav class="main-nav main-nav--closed main-nav--nojs">
 			
@@ -59,13 +65,14 @@
 			<td class="statistic-table__values">500&nbsp;000&nbsp;<sup>*</sup></td>
 			<td class="statistic-table__field">лайков</br> и комплиментов</td>
 		</tr>
+
 	</table>
 	<div class="statistic-header__note"><sup>*</sup> - привиденные данные ложь.</div>
 	</section>
 
 <!-- FEATURES -->
 	<section class="features">
-		<div class="features-wrapper"> 
+		<div class="features__wrapper"> 
 	<input class="features-slider" type="radio" name="features" id="features-1" checked>
 	<input class="features-slider" type="radio" name="features" id="features-2">
 	<input class="features-slider" type="radio" name="features" id="features-3">
@@ -83,13 +90,42 @@
 				<b class="features-item__title">дорого</b>
 				<p class="features-item__text">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена&nbsp;не даёт определённый статус?</p>
 			</div>
+
+			<div class="slider slider-none">
 	<label class="features-slider__btn features-slider__btn--active" for="features-1"></label>
 	<label class="features-slider__btn" for="features-2"></label>
 	<label class="features-slider__btn" for="features-3"></label>
+	</div>
 			</div>
 		</div>
 	</section>
+<!-- NEWS -->
+	<section class="news">
+		<h2 class="news-title">Новости и акции</h2>
 
+		<article class="news-item">
+			<time class="news-item__date" datetime="2016-09-29">29<span class="news-date--big">сент</span></time>
+			<a href="" class="news-item__link">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки</a>
+		</article>
+
+		<article class="news-item">
+			<time class="news-item__date" datetime="2016-09-19">19<span class="news-date--big">сент</span></time>
+			<a href="" class="news-item__link">В нашей команде пополнение, Борис «Бритва» Стригунец, <span class="news__only-mobile">обладатель множества титулов и наград</span> пополнил наши стройные ряды. Спешите записаться!</a>
+		</article>
+
+		<article class="news-item">
+			<time class="news-item__date" datetime="2016-09-09">9<span class="news-date--big">сент</span></time>
+			<a href="" class="news-item__link">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</a>
+		</article>
+		
+		</article>
+	<a href="#" class="btn btn-news">показать все</a>
+	</section>
+
+<!-- FEEDBACK -->
+	<section class="feedback">
+		
+	</section>
 	<script src="js/reviews.js"></script>
 </body>
 </html>
